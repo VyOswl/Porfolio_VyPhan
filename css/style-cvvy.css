@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Lato:300:400');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+    background: linear-gradient(60deg, rgb(240, 214, 189) 0%,rgb(238, 193, 144) 100%);
+    margin: 0%;
+}
+.smaller-image {
+    border-radius: 15px;
+    width: 70px;
+}
+.text-box {
+	position: relative;
+	top: 30%;
+	left: 50.3%;
+	transform: translate(-50%, -40%);
+    z-index: 0;
+}
+.heading-primary {
+    color: rgba(124, 79, 28, 0.9);
+    text-transform: uppercase;
+}
+.heading-primary-main {
+    display: block;
+    font-size: 25px;
+    font-family: 'Playfair Display', serif;
+	font-weight: 700;
+    letter-spacing: 15px;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+}
+.heading-primary-sub {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 8px;
+    line-height: 20px;
+	animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+    opacity: 0;
+    transform: translateX(-100px);
+    }
+    80% {
+    transform: translateX(5px);
+    }
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+    }
+}
+@keyframes moveInRight {
+    0% {
+    opacity: 0;
+    transform: translateX(100px);
+    }
+    80% {
+    transform: translateX(-5px);
+    }
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+    }
+}
+
+/* NAVBAR STYLING STARTS */
+#navbar {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 5px;
+    z-index: 1;
+}
+/* Style the links inside the navigation bar */
+#navbar a {
+    float: left;
+    color: rgb(102, 65, 24);
+    text-align: center;
+    padding: 7px 40px 7px 40px;
+    text-decoration: solid;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight: bolder;
+}
+
+  /* Change the color of links on hover */
+#navbar a:hover {
+    background-color: rgba(124,79,28, 0.636);
+    color: black;
+    border-radius: 20px;
+}
+  /* Add a color to the active/current link */
+#navbar a.active {
+    background-color: rgba(124,79,28,0.8);
+    color: white;
+    border-radius: 5px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+
+div {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    padding: 15px;
+    margin: 15px;
+}
+
+section {
+    border: 4px rgb(109, 99, 65);
+    box-shadow: 10px 10px 10px rgba(228, 183, 145, 0.9);
+    padding: 20px;
+    margin: 20px;
+    background-color: rgba(250, 231, 214, 0.6);
+    border-radius: 15px;
+}
+
+a /* Liens par défaut (non survolés) */
+{
+    text-decoration: none;
+    color: #553b28;
+    font-style: italic;
+}
+a:hover /* Apparence au survol des liens */
+{
+    text-decoration: underline;
+    color: #3a7070;
+    font-weight: bold;
+}
+a:active /* Quand le visiteur clique sur le lien */
+{
+    background-color: #FFCC66;
+}
+a:focus /* Quand le visiteur sélectionne le lien */
+{
+    background-color: #F47068;
+}
+a:visited /* Quand le visiteur a déjà vu la page concernée */
+{
+    color: #AAA; /* Appliquer une couleur grise */
+}
+
+.collapsible {
+    background-color: rgba(124,79,28,0.4);
+    color: rgb(107, 69, 25);
+    font-size: 17px;
+    text-decoration: solid;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 550;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 1px 20px 1px 10px;
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+}
+.active, .collapsible:hover {
+    background-color: rgba(124,79,28,0.6);
+    color: white;
+}
+.collapContent {
+    align-items: center;
+    display: flex;
+    margin: 20px 20px 0 0;
+}
+
+.textContent {
+    text-align: justify;
+    background-color: rgba(124,79,28,0.1);
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+}
+.illustrations {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+}
+strong {
+    font-size: 2.5ex;
+    color: #705b3a;
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgba(124,79,28,0.7); /* Set a background color rgb(144, 126, 107); */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 15px; /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}

@@ -1,0 +1,118 @@
+    body {
+        margin: 0%;
+        background: linear-gradient(60deg, rgb(248, 209, 172) 0%,rgb(238, 193, 144) 50%, rgb(163, 119, 83) 100%);
+        text-align: center;
+    }
+
+    .smaller-image {
+        width: 100px;
+        border-radius: 15px;
+        margin-top: 30px;
+        position: relative;
+    }
+
+    .text-box {
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%, -40%);
+    position: relative;
+    }
+    .heading-primary {
+    color: rgba(124, 79, 28, 0.9);
+    text-transform: uppercase;
+    }
+    .heading-primary-main {
+    display: block;
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
+        font-weight: 400;
+    letter-spacing: 35px;
+    animation-name: moveInLeft;
+    animation-duration: 4s;
+    }
+    .heading-primary-sub {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 15px;
+    line-height: 20px;
+        animation-name: moveInRight;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+    }
+    @keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    }
+    @keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80% {
+        transform: translateX(-5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    }
+
+    div.gallery {
+        border: 1px solid #ccc;
+        }
+        
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+        
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+        
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .responsive {
+            margin: 30px;
+            padding: 0 6px;
+            float: left;
+            width: 24.99999%;
+        }
+        
+        @media only screen and (max-width: 700px) {
+            .responsive {
+            width: 49.99999%;
+            margin: 6px 0;
+            }
+        }
+        
+        @media only screen and (max-width: 500px) {
+            .responsive {
+            width: 100%;
+            }
+        }
+        
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
